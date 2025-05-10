@@ -22,7 +22,7 @@ function App() {
     setPaymentLink('');
 
     try {
-      const res = await axios.post('/api/initiate-payment', formData);
+      const res = await axios.post('https://fincra-payment-app.vercel.app/api/initiate-payment', formData);
       setPaymentLink(res.data.paymentLink);
     } catch (err) {
       console.log(err)
