@@ -25,6 +25,7 @@ function App() {
       const res = await axios.post('/api/initiate-payment', formData);
       setPaymentLink(res.data.paymentLink);
     } catch (err) {
+      console.log(err)
       alert('Payment initiation failed.');
     } finally {
       setLoading(false);
